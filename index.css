@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    background-color: cadetblue;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.teclado-numerico {
+    display: grid;
+    max-width: 540px;
+    width: 100%;
+}
+
+.teclado-numerico ul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: 64px 64px 64px;
+}
+
+.teclado-numerico .zero {
+    margin-top: 8px;
+    width: 168px;
+    height: 32px;
+    margin-left: 3%;
+}
+
+.teclado-numerico li button {
+    width: 46px;
+    height: 46px;
+    margin: 14px;
+    padding: 16px;
+}
