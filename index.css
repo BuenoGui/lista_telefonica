@@ -16,26 +16,30 @@ button {
     cursor: pointer;
 }
 
-.teclado-numerico {
-    display: grid;
-    max-width: 540px;
+.TecladoNumerico {
+    /* opacity: 0; */
+    background-color: rgba(169, 169, 169, 0.473);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
     width: 100%;
 }
 
-.teclado-numerico ul {
+.TecladoNumerico ul {
     display: grid;
     list-style: none;
     grid-template-columns: 64px 64px 64px;
 }
 
-.teclado-numerico .zero {
+.TecladoNumerico .zero {
     margin-top: 8px;
     width: 168px;
     height: 32px;
     margin-left: 3%;
 }
 
-.teclado-numerico li button {
+.TecladoNumerico li button {
     width: 46px;
     height: 46px;
     margin: 14px;
