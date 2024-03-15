@@ -16,9 +16,9 @@
             <h1>Vamos adicionar contatos para sua lista</h1>
         </header>
         
-        <form id="form-atividade">
-            <input type="text" placeholder="Nome do contato" id="Nome" required>
-            <input type="number" placeholder="Número" id="Num" required>
+        <form>
+            <input type="text" placeholder="Nome do contato" id="nomeContato" required>
+            <input type="tel" placeholder="Número" id="numeroContato" required>
             <button type="submit">Adicionar +</button>
         </form>
     
@@ -27,22 +27,23 @@
                 <tr>  
                     <th>Nome do contato</th>
                     <th>Número</th>
+                    <th>Contato</th>
                 </tr>
             </thead>
     
             <tbody> <!-- Corpo da tabela --> 
                 <tr>                           
-                    <td>Sonia</td>
+                    <!-- <td>Sonia</td>
                     <td>972664038</td>
-                    <td><img src="" alt="foto do telefone(app do celular)"></td>
+                    <td>1</td> -->
                 </tr>
             </tbody>
     
             <tfoot> <!-- Roda-pé da tabela -->
                 <tr>
                     <td>Total de contatos</td>
-                    <td> 1 </td>
-                    <td>---</span></td>
+                    <td>---</td>
+                    <td id="TotalContatos">0</td>
                 </tr>
             </tfoot>
         </table>
