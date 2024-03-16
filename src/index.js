@@ -8,15 +8,12 @@ $(document).ready(function() {
         })    
     });
 
-
     const contatos = [];
     const nums = [];
 
 
     let contador = 0;
     let linhas = "";
-
-
 
     $('form').submit(function(adicionar) {
         adicionar.preventDefault();
@@ -30,7 +27,7 @@ $(document).ready(function() {
         const nomeContato = document.getElementById('nomeContato');
         const numeroContato = document.getElementById('numeroContato');
 
-        if(contatos.includes(numeroContato.value)) {
+        if(nums.includes(numeroContato.value)) {
             alert('Você não pode ter dois contatos com o mesmo numero');
         } else {
             contatos.push(nomeContato.value);
@@ -56,5 +53,34 @@ $(document).ready(function() {
     function atualizaTotal() {
         document.getElementById('TotalContatos').innerHTML = contador;
     }
+
+    // Aqui é lógica do teclado númerico
+
+    $('.btn').click(function() {
+        let valor = $(this).text();
+
+        $('#numeroContato').val($('#numeroContato').val() + valor);
+    })
+
+    $('.apagar').click(function() {
+        let valorAtual = $('#numeroContato').val();
+        let novoValor = valorAtual.slice(0, -1);
+
+        $('#numeroContato').val(novoValor);
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });

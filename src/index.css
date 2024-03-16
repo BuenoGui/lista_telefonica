@@ -32,7 +32,6 @@ button {
 }
 
 .TecladoNumerico {
-    background-color: rgba(169, 169, 169, 0.473);
     display: none;
     flex-direction: column;
     align-items: center;
@@ -48,12 +47,12 @@ button {
     grid-template-columns: 86px 86px 86px;
 }
 
-.TecladoNumerico .zero {
+.TecladoNumerico .zero,
+.apagar {
     font-size: 22px;
     margin-top: 8px;
-    width: 200px;
+    width: 140px;
     height: 54px;
-    margin-left: 3%;
     border-radius: 26px;
 }
 
@@ -64,6 +63,26 @@ button {
     padding: 16px;
     border-radius: 32px;
     font-size: 22px;
+}
+
+.apagar {
+    width: 60px;
+    height: 25px;
+}
+
+.especiais button {
+    margin: 12px;
+}
+
+.TecladoNumerico button {
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.TecladoNumerico button:hover {
+    transition: 1.3s;
+    background-color: rgba(68, 68, 68, 0.6);
+    color: white;
 }
 
 .container {
@@ -124,4 +143,3 @@ table td {
     padding: 10px;
     border-bottom: 1px solid rgba(169, 169, 169, 0.4);
 }
-
