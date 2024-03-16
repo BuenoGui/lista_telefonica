@@ -13,7 +13,7 @@ $(document).ready(function() {
     const nums = [];
 
 
-    let contador = 1;
+    let contador = 0;
     let linhas = "";
 
 
@@ -23,6 +23,7 @@ $(document).ready(function() {
 
         adicionarLinha();
         atualizaTabela();
+        atualizaTotal();
     })
     
     function adicionarLinha() {
@@ -33,12 +34,11 @@ $(document).ready(function() {
             alert('Você não pode ter dois contatos com o mesmo numero');
         } else {
             contatos.push(nomeContato.value);
-            nums.push(numeroContato);
+            nums.push(numeroContato.value);
 
             let linha = '<tr>';
             linha += `<td> ${nomeContato.value} </td>`;
             linha += `<td> ${numeroContato.value} </td>`;
-            linha += `<td> ${contador} <td>`
             linha += '</tr>';
 
             linhas += linha;
@@ -51,6 +51,10 @@ $(document).ready(function() {
     function atualizaTabela() {
         const corpoTabela = document.querySelector('tbody');
         corpoTabela.innerHTML = linhas;
+    }
+
+    function atualizaTotal() {
+        document.getElementById('TotalContatos').innerHTML = contador;
     }
 
 });
